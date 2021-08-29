@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous" />
+  <link rel="stylesheet" href="css/font.css" />
+
+  <title>質問フォーム</title>
+</head>
+
+<body>
+  <div class="container py-5">
+    <form class="needs-validation" method="POST" action="send/question_from_parents.php" enctype="multipart/form-data" novalidate>
+
+      <!-- 保護者様の名前 -->
+      <div class="mb-3">
+        <label for="name-parent" class="form-label">あなたのお名前</label>
+        <input type="text" class="form-control" id="name-parent" name="name-parent" required />
+        <div class="invalid-feedback">保護者様のお名前を記入してください。</div>
+      </div>
+
+      <!-- 生徒の名前 -->
+      <div class="mb-3">
+        <label for="name-student" class="form-label">お子様のお名前</label>
+        <input type="text" class="form-control" id="name-student" name="name-student" required />
+        <div class="invalid-feedback">生徒様のお名前を記入してください。</div>
+      </div>
+
+      <!-- お問い合わせの内容 -->
+      <div class="input-group mb-3">
+        <span class="input-group-text">お問い合わせの内容</span>
+        <textarea class="form-control" aria-label="お問い合わせの内容" name="content" required></textarea>
+        <div class="invalid-feedback">具体的なご要件を記入してください。</div>
+      </div>
+      <button type="submit" class="btn btn-primary">送信</button>
+    </form>
+  </div>
+  <!-- Bootstrap js -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
+  </script>
+  <!-- 画像プレビュー -->
+  <script async src="js/fileReader.js"></script>
+  <script async src="js/validator.js"></script>
+</body>
+
+</html>

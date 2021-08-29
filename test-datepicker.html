@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang=ja">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+</head>
+
+<body>
+    <h4>デフォルトの呼び出し</h4>
+    <input type="text" id="datepicker">
+
+    <h4>オプションを指定した呼び出し</h4>
+    <input type="text" id="datepicker2">
+
+    <script>
+        $("#datepicker").datepicker();
+
+        $("#datepicker2").datepicker({
+            dateFormat: 'yy-mm-dd',
+            firstDay: 1, //0?6　0が日曜、1が月曜、2が火曜・・・・6が土曜
+            monthNames: ["1月", "2月", "3月", "4月", "5月", "6月", "7月", "8月", "9月", "10月", "11月", "12月"]// 初期値[ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ]
+        });
+    </script>
+</body>
+
+</html>

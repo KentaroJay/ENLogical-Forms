@@ -1,0 +1,14 @@
+:root {
+      --font-family-monospace:
+        SFMono-Regular,
+        Menlo,
+        Monaco,
+        Consolas,
+        "Liberation Mono",
+        "Courier New",
+        monospace;
+    }
+
+body {
+    font-family: var(--font-family-monospace);
+}
